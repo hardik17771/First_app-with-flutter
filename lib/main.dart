@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,19 +13,29 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.blue,
         body: SafeArea(
-        child: Container(
+        child: Column(
+          verticalDirection: VerticalDirection.down,
+          children: <Widget>[
+          Container(
           height: 100.0,
-          width: 500.0,
-          margin: EdgeInsets.symmetric(vertical: 50.0,
-          horizontal: 10.0),
+          width: 200.0,
+          margin: EdgeInsets.fromLTRB(30.0, 10.0, 50.0, 20.0 ),
+          padding: EdgeInsets.all(20.0),
           color: Colors.white,
-          child: Text('Mehul Sood Supremacy'),
-
+          child: Text('Container 1'),
+          ),
+            Container(
+            height: 100.0,
+            width: 200.0,
+              margin: EdgeInsets.fromLTRB(30.0, 10.0, 50.0, 20.0 ),
+              padding: EdgeInsets.all(20.0),
+            color: Colors.red,
+            child: Text('Container 2'),
+              ),
+          ],
         ),
       ),
       ),
     );
   }
 }
-
-ghcc
